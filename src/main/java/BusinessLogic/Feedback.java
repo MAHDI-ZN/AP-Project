@@ -1,3 +1,5 @@
+package BusinessLogic;
+
 /**
  * An enum to determine level of satisfaction of students of their consultants
  */

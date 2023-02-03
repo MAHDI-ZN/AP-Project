@@ -1,3 +1,5 @@
+package BusinessLogic;
+
 /**
  * Task class allows the consultant to assign tasks to students with a certain deadline and description
  */

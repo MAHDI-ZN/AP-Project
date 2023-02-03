@@ -1,3 +1,5 @@
+package BusinessLogic;
+
 /**
  * A wrapper class for lessons a student may enroll
  */
