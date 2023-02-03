@@ -19,7 +19,7 @@ alternatively you can pull the docker image of project from [here](https://hub.d
 in the terminal.<STRONG>please notice that you have to have docker installed on your machine. you also must have the official image of redis on your machine</STRONG>
 * docker network create mynet
 * docker run -p 6000:6379 -d --name myred --network mynet redis
-* docker run -p 80:80 -i -t mr87mohammadi/ap-project-image
+* docker run -p 80:80 -i -t --network mynet mr87mohammadi/ap-project-image
 # Usage
 At the beginning you have to choose your role and then enter your credentials to sing in, then you'll see a menu, based on your role,
 and you can choose the items on the menu.
