@@ -1,0 +1,493 @@
+@startuml
+participant Actor
+Actor -> UserInterface : signIn
+activate UserInterface
+UserInterface -> UserInterface : studentExists
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : student
+activate UserInterface
+UserInterface -> Student : quiz
+activate Student
+Student --> UserInterface
+deactivate Student
+UserInterface -> Quiz : setInvalid
+activate Quiz
+Quiz --> UserInterface
+deactivate Quiz
+UserInterface -> Quiz : setValid
+activate Quiz
+Quiz --> UserInterface
+deactivate Quiz
+UserInterface -> UserInterface : run
+activate UserInterface
+UserInterface -> UserInterface : signUp
+activate UserInterface
+create Student
+UserInterface -> Student : new
+activate Student
+create Person
+Student -> Person : new
+activate Person
+Person --> Student
+deactivate Person
+Student -> Consultant : addStudent
+activate Consultant
+Consultant --> Student
+deactivate Consultant
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : addStudent
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : giveFeedback
+activate UserInterface
+UserInterface -> Manager : getFeedBack
+activate Manager
+Manager --> UserInterface
+deactivate Manager
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : giveFeedback
+activate UserInterface
+UserInterface -> Manager : getFeedBack
+activate Manager
+Manager --> UserInterface
+deactivate Manager
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : giveFeedback
+activate UserInterface
+UserInterface -> Manager : getFeedBack
+activate Manager
+Manager --> UserInterface
+deactivate Manager
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : showTasks
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : checkTasks
+activate UserInterface
+UserInterface -> Student : removeTask
+activate Student
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : sendMessage
+activate UserInterface
+UserInterface -> Person : sendMessage
+activate Person
+Person --> UserInterface
+deactivate Person
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : showMessages
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : run
+activate UserInterface
+UserInterface -> UserInterface : signUp
+activate UserInterface
+create Student
+UserInterface -> Student : new
+activate Student
+create Person
+Student -> Person : new
+activate Person
+Person --> Student
+deactivate Person
+Student -> Consultant : addStudent
+activate Consultant
+Consultant --> Student
+deactivate Consultant
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : addStudent
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : run
+activate UserInterface
+UserInterface -> UserInterface : signUp
+activate UserInterface
+create Student
+UserInterface -> Student : new
+activate Student
+create Person
+Student -> Person : new
+activate Person
+Person --> Student
+deactivate Person
+Student -> Consultant : addStudent
+activate Consultant
+Consultant -> Group : addStudent
+activate Group
+Group --> Consultant
+deactivate Group
+Consultant --> Student
+deactivate Consultant
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : addStudent
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : consultantExists
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : consultant
+activate UserInterface
+UserInterface -> UserInterface : modifyTask
+activate UserInterface
+create Task
+UserInterface -> Task : new
+activate Task
+Task --> UserInterface
+deactivate Task
+create Task
+UserInterface -> Task : new
+activate Task
+Task --> UserInterface
+deactivate Task
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : showResults
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : sendMessage
+activate UserInterface
+UserInterface -> Person : sendMessage
+activate Person
+Person --> UserInterface
+deactivate Person
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : showMessages
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : declareQuiz
+activate UserInterface
+UserInterface -> Consultant : declareQuiz
+activate Consultant
+create Quiz
+Consultant -> Quiz : new
+activate Quiz
+Quiz --> Consultant
+deactivate Quiz
+Consultant -> Student : addQuiz
+activate Student
+Student --> Consultant
+deactivate Student
+Consultant --> UserInterface
+deactivate Consultant
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : addStudent
+activate UserInterface
+create Student
+UserInterface -> Student : new
+activate Student
+create Person
+Student -> Person : new
+activate Person
+Person --> Student
+deactivate Person
+Student -> Consultant : addStudent
+activate Consultant
+Consultant -> Group : addStudent
+activate Group
+Group --> Consultant
+deactivate Group
+Consultant --> Student
+deactivate Consultant
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : removeStudent
+activate UserInterface
+UserInterface -> Consultant : removeStudent
+activate Consultant
+Consultant -> Group : removeStudent
+activate Group
+Group --> Consultant
+deactivate Group
+Consultant --> UserInterface
+deactivate Consultant
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : run
+activate UserInterface
+UserInterface -> UserInterface : signUp
+activate UserInterface
+create Student
+UserInterface -> Student : new
+activate Student
+create Person
+Student -> Person : new
+activate Person
+Person --> Student
+deactivate Person
+Student -> Consultant : addStudent
+activate Consultant
+Consultant --> Student
+deactivate Consultant
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : addStudent
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : run
+activate UserInterface
+UserInterface -> UserInterface : signUp
+activate UserInterface
+create Student
+UserInterface -> Student : new
+activate Student
+create Person
+Student -> Person : new
+activate Person
+Person --> Student
+deactivate Person
+Student -> Consultant : addStudent
+activate Consultant
+Consultant -> Group : addStudent
+activate Group
+Group --> Consultant
+deactivate Group
+Consultant --> Student
+deactivate Consultant
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : addStudent
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : managerExists
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : manager
+activate UserInterface
+UserInterface -> UserInterface : showConsultants
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : showResults
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : sendMessage
+activate UserInterface
+UserInterface -> Person : sendMessage
+activate Person
+Person --> UserInterface
+deactivate Person
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : showMessages
+activate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : addConsultant
+activate UserInterface
+create Consultant
+UserInterface -> Consultant : new
+activate Consultant
+create Person
+Consultant -> Person : new
+activate Person
+Person --> Consultant
+deactivate Person
+Consultant -> Manager : addConsultant
+activate Manager
+Manager --> Consultant
+deactivate Manager
+Consultant --> UserInterface
+deactivate Consultant
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : removeConsultant
+activate UserInterface
+UserInterface -> Manager : removeConsultant
+activate Manager
+Manager --> UserInterface
+deactivate Manager
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : run
+activate UserInterface
+UserInterface -> UserInterface : signUp
+activate UserInterface
+create Student
+UserInterface -> Student : new
+activate Student
+create Person
+Student -> Person : new
+activate Person
+Person --> Student
+deactivate Person
+Student -> Consultant : addStudent
+activate Consultant
+Consultant --> Student
+deactivate Consultant
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : addStudent
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : run
+activate UserInterface
+UserInterface -> UserInterface : signUp
+activate UserInterface
+create Student
+UserInterface -> Student : new
+activate Student
+create Person
+Student -> Person : new
+activate Person
+Person --> Student
+deactivate Person
+Student -> Consultant : addStudent
+activate Consultant
+Consultant -> Group : addStudent
+activate Group
+Group --> Consultant
+deactivate Group
+Consultant --> Student
+deactivate Consultant
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : addStudent
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface -> UserInterface : run
+activate UserInterface
+UserInterface -> UserInterface : signUp
+activate UserInterface
+create Student
+UserInterface -> Student : new
+activate Student
+create Person
+Student -> Person : new
+activate Person
+Person --> Student
+deactivate Person
+Student -> Consultant : addStudent
+activate Consultant
+Consultant -> Group : addStudent
+activate Group
+Group --> Consultant
+deactivate Group
+Consultant --> Student
+deactivate Consultant
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : addStudent
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+UserInterface --> UserInterface
+deactivate UserInterface
+UserInterface --> UserInterface
+deactivate UserInterface
+return
+@enduml

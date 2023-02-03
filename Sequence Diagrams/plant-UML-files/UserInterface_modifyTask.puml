@@ -1,0 +1,20 @@
+@startuml
+participant Actor
+Actor -> UserInterface : modifyTask
+activate UserInterface
+create Task
+UserInterface -> Task : new
+activate Task
+Task --> UserInterface
+deactivate Task
+create Task
+UserInterface -> Task : new
+activate Task
+Task --> UserInterface
+deactivate Task
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+return
+@enduml

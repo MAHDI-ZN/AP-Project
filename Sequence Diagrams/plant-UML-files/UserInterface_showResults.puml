@@ -1,0 +1,6 @@
+@startuml
+participant Actor
+Actor -> UserInterface : showResults
+activate UserInterface
+return
+@enduml

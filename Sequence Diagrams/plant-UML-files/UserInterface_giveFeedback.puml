@@ -1,0 +1,14 @@
+@startuml
+participant Actor
+Actor -> UserInterface : giveFeedback
+activate UserInterface
+UserInterface -> Manager : getFeedBack
+activate Manager
+Manager --> UserInterface
+deactivate Manager
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+return
+@enduml

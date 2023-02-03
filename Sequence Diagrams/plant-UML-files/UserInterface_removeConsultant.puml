@@ -1,0 +1,14 @@
+@startuml
+participant Actor
+Actor -> UserInterface : removeConsultant
+activate UserInterface
+UserInterface -> Manager : removeConsultant
+activate Manager
+Manager --> UserInterface
+deactivate Manager
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+return
+@enduml

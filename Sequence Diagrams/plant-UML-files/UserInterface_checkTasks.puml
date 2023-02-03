@@ -1,0 +1,14 @@
+@startuml
+participant Actor
+Actor -> UserInterface : checkTasks
+activate UserInterface
+UserInterface -> Student : removeTask
+activate Student
+Student --> UserInterface
+deactivate Student
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+return
+@enduml

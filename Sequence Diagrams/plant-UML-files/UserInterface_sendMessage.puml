@@ -1,0 +1,14 @@
+@startuml
+participant Actor
+Actor -> UserInterface : sendMessage
+activate UserInterface
+UserInterface -> Person : sendMessage
+activate Person
+Person --> UserInterface
+deactivate Person
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+return
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+participant Actor
+Actor -> UserInterface : declareQuiz
+activate UserInterface
+UserInterface -> Consultant : declareQuiz
+activate Consultant
+create Quiz
+Consultant -> Quiz : new
+activate Quiz
+Quiz --> Consultant
+deactivate Quiz
+Consultant -> Student : addQuiz
+activate Student
+Student --> Consultant
+deactivate Student
+Consultant --> UserInterface
+deactivate Consultant
+UserInterface -> DataBase : refreshDB
+activate DataBase
+DataBase --> UserInterface
+deactivate DataBase
+return
+@enduml
