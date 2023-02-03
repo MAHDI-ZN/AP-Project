@@ -26,6 +26,8 @@ and you can choose the items on the menu.
 anyone can sign up as a student, but consultants must be 
 signed up by the manager. managers themselves must be signed up by the owner, and they cannot be added by themselves or any other role but the owner.
 for interacting with the program you just have to click on the numbers based on the menu that you're currently seeing on the terminal.
+if you had any question about object-oriented design of the project, you can check
+diagrams and other related assets which are in the root of project in specified folders.
 
 # Author
 **Mahdi Mohammadi**
