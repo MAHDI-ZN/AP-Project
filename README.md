@@ -16,7 +16,7 @@ You can run jar file of the project in out/artifacts/AP_Project_jar directory.
 please notice that you must have redis installed and running on port 6379 of your machine
 in order for project to get connected to DataBase.
 alternatively you can pull the docker image of project from [here](https://hub.docker.com/r/mr87mohammadi/ap-project-image) and run the following instructions
-in the terminal.<STRONG>please notice that you have to have docker installed on your machine. you also must have the official image of redis on your machine</STRONG>
+in the terminal.<STRONG>please notice that you have to have docker installed and activated on your machine. you also must have the official image of redis on your machine.</STRONG>
 * docker network create mynet
 * docker run -p 6000:6379 -d --name myred --network mynet redis
 * docker run -p 80:80 -i -t --network mynet mr87mohammadi/ap-project-image
